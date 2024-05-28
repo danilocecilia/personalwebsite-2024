@@ -31,3 +31,28 @@ body {
     text-wrap: balance;
   }
 }
+
+.flash-slide {
+  border: none;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.flash-slide::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -80px;
+  height: 100px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(20deg);
+}
+.flash-slide:hover::before {
+  left: 245px;
+  transition: all 0.4s ease 0s;
+}
